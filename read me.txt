@@ -1,0 +1,16 @@
+In this programming assignmnet we program an HTTP Proxy Server. HTTP proxy server is a type of server which
+sits in between the host and the server on the Internet. This assigment is based on the HTML 1.1. Every time a host
+wants to make a request it has to establish a new TCP connection, so we end up wasting 2 round trip time even before 
+the required date is requested. This makes the connection very slow when the server is sitting far away from the client. 
+Hence, some people created the concept of proxy server to cater frequently used pages faster. 
+Every time a client/host makes a request for some webpage, the proxy server checks for that webpage to see if that
+request has been accessed earlier. If that request was made earlier proxy server would have cached that page in the
+memory, so it instead of sending the request to the server on internet it directly caters the request. Therefore 
+this makes it faster to access the webpages. If the webpage is not present in the Cache, or expired. The proxy server
+will forward the request to required host. After, the server receives the response from the external host. It caches 
+the result to serve the similiar requests in future. Every time it caches the page on cache it sets the expire time 
+field to make sure that no client is served with the expired data. Our proxy server only stores the 10 least recently
+used entries into the cache.
+
+
+
